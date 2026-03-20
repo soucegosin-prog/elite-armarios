@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Armários Planejados</title>
+  <meta name="description" content="Site institucional da Elite Armários Planejados. Projetos sob medida com sofisticação, funcionalidade e acabamento de alto padrão." />
+  <style>
+    :root {
+      --primary: #0c2f98;
+      --primary-2: #153dbb;
+      --primary-3: #1b47d6;
+      --accent: #d8d0bf;
+      --accent-2: #f2eee6;
+      --gold: #d8ad46;
+      --dark: #0b0f1a;
+      --dark-2: #101624;
+      --dark-3: #070b14;
+      --text: #f5f7fb;
+      --muted: #c8d1e0;
+      --card: rgba(255,255,255,0.06);
+      --card-strong: rgba(255,255,255,0.08);
+      --border: rgba(255,255,255,0.12);
+      --shadow: 0 18px 45px rgba(0,0,0,0.28);
+      --shadow-blue: 0 16px 38px rgba(21,61,187,0.28);
+      --radius: 22px;
+      --max: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(21,61,187,0.18), transparent 30%),
+        linear-gradient(180deg, #081127 0%, #0a1836 22%, #0b0f1a 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button,
+    input,
+    textarea {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+      width: min(92%, var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      background: rgba(7, 13, 28, 0.82);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .navbar {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 74px;
+      height: 74px;
+      object-fit: contain;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      padding: 6px;
+      box-shadow: var(--shadow);
+      flex-shrink: 0;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text strong {
+      font-size: 1.05rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-2);
+    }
+
+    .brand-text span {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.96rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #fff;
+    }
+
+    .menu-btn {
+      display: none;
+      border: none;
+      background: transparent;
+      color: #fff;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: 0.01em;
+      white-space: nowrap;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-2), var(--primary));
+      color: white;
+      box-shadow: 0 10px 30px rgba(21,61,187,0.32);
+    }
+
+    .btn-primary:hover {
+      box-shadow: 0 14px 34px rgba(21,61,187,0.4);
+    }
+
+    .btn-outline {
+      background: rgba(255,255,255,0.05);
+      color: var(--accent-2);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .hero {
+      padding: 84px 0 54px;
+      background:
+        linear-gradient(rgba(8,17,39,0.72), rgba(11,15,26,0.88)),
+        url("images/cozinha.jpeg.jpeg") center/cover no-repeat;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(216,208,191,0.1);
+      color: var(--accent);
+      border: 1px solid rgba(216,208,191,0.16);
+      font-size: 0.86rem;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 4.2vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 640px;
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 4px);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      min-height: 440px;
+      display: grid;
+      align-content: space-between;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(216,208,191,0.22), transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-photo {
+      width: 100%;
+      height: 290px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      margin-bottom: 18px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.4rem;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    section {
+      padding: 62px 0;
+    }
+
+    .section-title {
+      margin-bottom: 28px;
+    }
+
+    .section-title span {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.82rem;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.7rem, 3vw, 2.8rem);
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--accent-2);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .portfolio-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid var(--border);
+      background: #0f1627;
+      box-shadow: var(--shadow);
+      min-height: 300px;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 22px;
+      background: linear-gradient(180deg, transparent, rgba(0,0,0,0.78));
+    }
+
+    .portfolio-overlay h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .portfolio-overlay p {
+      color: #d9e0ed;
+      font-size: 0.93rem;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, rgba(12,47,152,0.92), rgba(11,15,26,0.96));
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 28px;
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta-box h3 {
+      font-size: clamp(1.45rem, 2.7vw, 2.2rem);
+      margin-bottom: 8px;
+    }
+
+    .cta-box p {
+      color: #d9e0ed;
+      max-width: 620px;
+    }
+
+    .company-section {
+      padding-top: 24px;
+    }
+
+    .company-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .company-card,
+    .form-card,
+    .map-card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .company-card {
+      padding: 30px;
+    }
+
+    .company-card h3,
+    .form-card h3,
+    .map-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .company-info-list {
+      display: grid;
+      gap: 18px;
+    }
+
+    .company-info-item {
+      padding: 18px 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .company-info-item strong {
+      display: block;
+      color: #ffc857;
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+
+    .company-info-item span,
+    .company-info-item a {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .form-card {
+      padding: 30px;
+    }
+
+    .budget-form {
+      display: grid;
+      gap: 16px;
+    }
+
+    .budget-form input,
+    .budget-form textarea {
+      width: 100%;
+      background: rgba(3,6,15,0.82);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 18px 20px;
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .budget-form input::placeholder,
+    .budget-form textarea::placeholder {
+      color: rgba(215,223,240,0.58);
+    }
+
+    .budget-form input:focus,
+    .budget-form textarea:focus {
+      border-color: rgba(21,61,187,0.7);
+      box-shadow: 0 0 0 3px rgba(21,61,187,0.18);
+    }
+
+    .budget-form textarea {
+      min-height: 170px;
+      resize: vertical;
+    }
+
+    .btn-gold {
+      min-height: 58px;
+      background: linear-gradient(135deg, #e2b84f, #c89a32);
+      color: #111;
+      font-size: 1.05rem;
+      font-weight: 800;
+      box-shadow: 0 12px 30px rgba(216,173,70,0.3);
+    }
+
+    .btn-gold:hover {
+      box-shadow: 0 16px 34px rgba(216,173,70,0.36);
+    }
+
+    .map-section {
+      padding-top: 14px;
+    }
+
+    .map-card {
+      padding: 26px;
+      max-width: 920px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .map-card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .map-frame {
+      min-height: 320px;
+      border: 0;
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .footer {
+      padding: 28px 0 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 16px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2cdf6b, #18b957);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 16px 34px rgba(37,211,102,0.32);
+      z-index: 999;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px) scale(1.03);
+      box-shadow: 0 20px 38px rgba(37,211,102,0.42);
+    }
+
+    .whatsapp-float svg {
+      width: 30px;
+      height: 30px;
+      fill: #fff;
+    }
+
+    @media (max-width: 980px) {
+      .hero-grid,
+      .cards,
+      .portfolio-grid,
+      .company-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        min-height: auto;
+      }
+
+      .stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav-links {
+        position: absolute;
+        top: 82px;
+        left: 0;
+        right: 0;
+        background: rgba(9, 14, 28, 0.98);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        display: none;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .navbar .btn-primary {
+        display: none;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 54px;
+      }
+
+      .brand-text strong {
+        font-size: 0.93rem;
+      }
+
+      .company-card,
+      .form-card,
+      .map-card {
+        padding: 22px;
+      }
+
+      .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        right: 16px;
+        bottom: 16px;
+      }
+
+      .whatsapp-float svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container navbar">
+      <a href="#inicio" class="brand">
+        <img src="images/logo.jpeg.jpeg" alt="Logo Elite Armários Planejados">
+        <div class="brand-text">
+          <strong>Elite Armários Planejados</strong>
+          <span>Elegância, funcionalidade e acabamento sob medida</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#ambientes">Ambientes</a>
+        <a href="#contato">Contato</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button>
+
+      <a class="btn btn-primary" href="https://wa.me/5562981615395?text=Olá!%20Quero%20um%20orçamento%20para%20armários%20planejados." target="_blank" rel="noopener noreferrer">
+        Solicitar orçamento
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow">Projetos sob medida para seu espaço</span>
+          <h1>Seu ambiente com mais <span>sofisticação</span>, organização e personalidade.</h1>
+          <p>
+            Na <strong>Elite Armários Planejados</strong>, transformamos cozinhas, quartos, painéis e guarda-roupas em ambientes elegantes, funcionais e feitos para durar.
+            Atendimento personalizado, design inteligente e acabamento profissional em cada detalhe.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/5562981615395?text=Olá!%20Quero%20fazer%20um%20projeto%20com%20a%20Elite%20Armários%20Planejados." target="_blank" rel="noopener noreferrer">
+              Chamar no WhatsApp
+            </a>
+            <a class="btn btn-outline" href="#ambientes">Ver ambientes</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img class="hero-photo" src="images/cozinha.jpeg.jpeg" alt="Projeto de cozinha planejada da Elite Armários Planejados">
+          <p>Cozinhas planejadas com visual sofisticado, melhor aproveitamento do espaço e acabamento profissional em cada detalhe.</p>
+
+          <div class="stats">
+            <div class="stat">
+              <strong>Sob medida</strong>
+              <span>Projetos personalizados</span>
+            </div>
+            <div class="stat">
+              <strong>Elegância</strong>
+              <span>Visual moderno e premium</span>
+            </div>
+            <div class="stat">
+              <strong>Praticidade</strong>
+              <span>Mais funcionalidade no dia a dia</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="container">
+        <div class="section-title">
+          <span>Sobre a empresa</span>
+          <h2>Marcenaria planejada com estética, precisão e funcionalidade</h2>
+          <p>
+            Atuamos com projetos de móveis planejados para cozinhas, quartos, salas e ambientes personalizados, sempre buscando unir beleza, organização e acabamento de alto padrão.
+          </p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Cozinhas Planejadas</h3>
+            <p>Projetos elegantes e funcionais para transformar sua cozinha em um ambiente bonito, prático e inteligente.</p>
+          </article>
+
+          <article class="card">
+            <h3>Guarda-roupas Sob Medida</h3>
+            <p>Soluções personalizadas para aproveitar melhor cada espaço, com acabamento moderno e excelente organização.</p>
+          </article>
+
+          <article class="card">
+            <h3>Painéis e Ambientes</h3>
+            <p>Produção de painéis, móveis e composições planejadas para valorizar o estilo e a funcionalidade da sua casa.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="ambientes">
+      <div class="container">
+        <div class="section-title">
+          <span>Ambientes</span>
+          <h2>Conheça alguns dos ambientes trabalhados</h2>
+          <p>Seleção de projetos com foco em sofisticação, aproveitamento de espaço e acabamento refinado.</p>
+        </div>
+
+        <div class="portfolio-grid">
+          <article class="portfolio-item">
+            <img src="images/cozinha.jpeg.jpeg" alt="Cozinha planejada">
+            <div class="portfolio-overlay">
+              <h3>Cozinha Planejada</h3>
+              <p>Design moderno, elegância e praticidade no dia a dia.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img src="images/quarto.jpeg.jpeg" alt="Quarto planejado">
+            <div class="portfolio-overlay">
+              <h3>Quarto Planejado</h3>
+              <p>Conforto visual, organização e sofisticação para seu ambiente.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img src="images/guardaroupa.jpeg.jpeg" alt="Guarda-roupa planejado">
+            <div class="portfolio-overlay">
+              <h3>Guarda-roupa</h3>
+              <p>Aproveitamento inteligente de espaço com acabamento premium.</p>
+            </div>
+          </article>
+
+          <article class="portfolio-item">
+            <img src="images/painel.jpeg.jpeg" alt="Painel planejado">
+            <div class="portfolio-overlay">
+              <h3>Painel e Sala</h3>
+              <p>Composição elegante para deixar seu ambiente ainda mais valorizado.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="cta-box">
+          <div>
+            <h3>Solicite seu orçamento com a Elite Armários Planejados</h3>
+            <p>Atendimento via WhatsApp com mais praticidade para tirar dúvidas, pedir orçamento e iniciar seu projeto sob medida.</p>
+          </div>
+
+          <a class="btn btn-primary" href="https://wa.me/5562981615395?text=Olá!%20Gostaria%20de%20solicitar%20um%20orçamento." target="_blank" rel="noopener noreferrer">
+            Pedir orçamento
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-section" id="contato">
+      <div class="container">
+        <div class="section-title">
+          <span>Atendimento</span>
+          <h2>Atendemos em Goiânia e região</h2>
+          <p>
+            Entre em contato para solicitar seu orçamento, tirar dúvidas e iniciar seu projeto planejado com atendimento rápido e personalizado.
+          </p>
+        </div>
+
+        <div class="company-grid">
+          <div class="company-card">
+            <h3>Informações da empresa</h3>
+
+            <div class="company-info-list">
+              <div class="company-info-item">
+                <strong>WhatsApp</strong>
+                <span>(62) 98161-5395</span>
+              </div>
+
+              <div class="company-info-item">
+                <strong>Instagram</strong>
+                <a href="https://www.instagram.com/elitearmariosplanejados/" target="_blank" rel="noopener noreferrer">@elitearmariosplanejados</a>
+              </div>
+
+              <div class="company-info-item">
+                <strong>E-mail</strong>
+                <span>rsc.elitesalviano@gmail.com</span>
+              </div>
+
+              <div class="company-info-item">
+                <strong>Atendimento</strong>
+                <span>Goiânia e região • Orçamentos sob medida</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <h3>Solicite seu orçamento</h3>
+
+            <form class="budget-form" id="budgetForm">
+              <input type="text" id="nome" placeholder="Seu nome" required>
+              <input type="text" id="telefone" placeholder="Seu WhatsApp" required>
+              <input type="text" id="ambiente" placeholder="Qual ambiente você quer planejar?" required>
+              <textarea id="descricao" placeholder="Descreva o que você precisa"></textarea>
+              <button type="submit" class="btn btn-gold">Enviar pelo WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" id="localizacao">
+      <div class="container">
+        <div class="map-card">
+          <div class="section-title" style="margin-bottom: 18px;">
+            <span>Localização</span>
+            <h2>Base em Jardim Helvécia - GO</h2>
+            <p>Atendimento em Goiânia e região com praticidade para projetos residenciais planejados.</p>
+          </div>
+
+          <iframe
+            class="map-frame"
+            src="https://www.google.com/maps?q=Jardim%20Helvecia%20GO%2074933-560&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <div>© 2026 Elite Armários Planejados. Todos os direitos reservados.</div>
+      <div>Projetos sob medida com elegância, funcionalidade e acabamento premium.</div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/5562981615395?text=Olá!%20Quero%20um%20orçamento." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M19.11 17.21c-.29-.14-1.72-.85-1.99-.95-.27-.1-.47-.14-.66.14-.19.29-.76.95-.93 1.15-.17.19-.34.22-.63.07-.29-.14-1.21-.45-2.3-1.42-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.45.13-.59.13-.13.29-.34.43-.51.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.51-.07-.14-.66-1.6-.91-2.19-.24-.57-.49-.49-.66-.5h-.56c-.19 0-.5.07-.76.36-.26.29-1 1-.97 2.43.02 1.43 1.02 2.81 1.16 3 .14.19 2 3.05 4.86 4.28.68.29 1.21.46 1.62.59.68.22 1.31.19 1.8.12.55-.08 1.72-.7 1.96-1.38.24-.68.24-1.26.17-1.38-.07-.12-.26-.19-.55-.33Z"/>
+      <path d="M16.03 3.2c-7.06 0-12.78 5.72-12.78 12.78 0 2.25.59 4.45 1.71 6.39L3.2 28.8l6.58-1.72a12.74 12.74 0 0 0 6.25 1.61h.01c7.06 0 12.79-5.72 12.79-12.78 0-3.42-1.33-6.63-3.75-9.04A12.68 12.68 0 0 0 16.03 3.2Zm0 23.32h-.01c-1.92 0-3.8-.51-5.45-1.47l-.39-.23-3.91 1.02 1.05-3.81-.25-.39a10.56 10.56 0 0 1-1.63-5.65c0-5.84 4.75-10.6 10.6-10.6 2.83 0 5.49 1.1 7.49 3.1 2 2 3.1 4.66 3.1 7.49 0 5.85-4.76 10.6-10.61 10.6Z"/>
+    </svg>
+  </a>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    const budgetForm = document.getElementById('budgetForm');
+
+    budgetForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const nome = document.getElementById('nome').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const ambiente = document.getElementById('ambiente').value.trim();
+      const descricao = document.getElementById('descricao').value.trim();
+
+      const mensagem =
+        `Olá! Quero solicitar um orçamento.%0A%0A` +
+        `Nome: ${encodeURIComponent(nome)}%0A` +
+        `WhatsApp: ${encodeURIComponent(telefone)}%0A` +
+        `Ambiente: ${encodeURIComponent(ambiente)}%0A` +
+        `Descrição: ${encodeURIComponent(descricao)}`;
+
+      const url = `https://wa.me/5562981615395?text=${mensagem}`;
+      window.open(url, '_blank');
+    });
+  </script>
+</body>
+</html>

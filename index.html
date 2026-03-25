@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elite Armários Planejados | Móveis Planejados em Goiânia</title>
+
+  <meta
+    name="description"
+    content="Móveis planejados em Goiânia e região com acabamento premium, atendimento personalizado e projetos sob medida para cozinhas, quartos, painéis e guarda-roupas."
+  />
+  <meta
+    name="keywords"
+    content="móveis planejados Goiânia, armários planejados Goiânia, cozinha planejada Goiânia, quarto planejado Goiânia, painel planejado Goiânia, guarda-roupa planejado Goiânia"
+  />
+  <meta name="author" content="Elite Armários Planejados" />
+  <meta name="theme-color" content="#0b1728" />
+
+  <meta property="og:title" content="Elite Armários Planejados | Móveis Planejados em Goiânia" />
+  <meta
+    property="og:description"
+    content="Projetos sob medida com acabamento premium, MDF de alta qualidade e atendimento personalizado em Goiânia e região."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="images/cozinha.jpeg.jpeg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-2: #0b1728;
+      --bg-3: #0f1e33;
+      --card: rgba(255, 255, 255, 0.06);
+      --line: rgba(255, 255, 255, 0.12);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --blue: #2f7df6;
+      --blue-strong: #1f67db;
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+      --radius: 24px;
+      --container: 1180px;
+      --whatsapp: #22c55e;
+      --whatsapp-strong: #16a34a;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(47, 125, 246, 0.18), transparent 30%),
+        radial-gradient(circle at top right, rgba(212, 175, 55, 0.10), transparent 28%),
+        linear-gradient(180deg, #07111f 0%, #0a1423 42%, #0d1829 100%);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
+    .container {
+      width: min(100% - 32px, var(--container));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.04);
+      border-radius: 999px;
+      color: #dbeafe;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 38px;
+    }
+
+    .section-head h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 14px;
+    }
+
+    .section-head p {
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 54px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      transition: 0.25s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--blue) 0%, #57a1ff 100%);
+      color: #fff;
+      box-shadow: 0 14px 30px rgba(47, 125, 246, 0.28);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg, var(--blue-strong) 0%, #4d95f2 100%);
+    }
+
+    .btn-outline {
+      border-color: var(--line);
+      background: rgba(255, 255, 255, 0.03);
+      color: #fff;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .header {
+      position: relative;
+      z-index: 1200;
+      transition: background 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    }
+
+    .header.scrolled {
+      background: rgba(7, 17, 31, 0.84);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    @media (min-width: 921px) {
+      .header {
+        position: sticky;
+        top: 0;
+      }
+    }
+
+    .nav {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      max-width: 360px;
+    }
+
+    .brand-logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      flex-shrink: 0;
+    }
+
+    .brand-logo img {
+      height: 100%;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-text span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.85rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .menu a {
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 0.98rem;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .menu a:hover {
+      color: #fff;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle {
+      display: none;
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      font-size: 1.25rem;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+    }
+
+    .mobile-panel {
+      display: none;
+      padding: 0 0 18px;
+    }
+
+    .mobile-panel.open {
+      display: block;
+    }
+
+    .mobile-links {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: rgba(7, 17, 31, 0.95);
+      backdrop-filter: blur(14px);
+    }
+
+    .mobile-links a {
+      padding: 12px 10px;
+      border-radius: 12px;
+      color: #e2e8f0;
+      font-weight: 600;
+    }
+
+    .mobile-links a:hover {
+      background: rgba(255,255,255,0.06);
+    }
+
+    .hero {
+      padding: 32px 0 84px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.03fr 0.97fr;
+      align-items: start;
+      gap: 34px;
+    }
+
+    .hero-copy h1 {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      margin-bottom: 18px;
+      max-width: 780px;
+    }
+
+    .hero-copy p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      max-width: 680px;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-badge {
+      padding: 12px 16px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid var(--line);
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 0.93rem;
+    }
+
+    .hero-visual {
+      display: grid;
+      gap: 18px;
+      align-self: start;
+    }
+
+    .hero-card {
+      position: relative;
+      border-radius: 30px;
+      overflow: hidden;
+      aspect-ratio: 3 / 2;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: var(--shadow);
+      background: #0b1628;
+    }
+
+    .hero-card img {
+      height: 100%;
+      object-position: center center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.03) 18%, rgba(0,0,0,0.18) 100%);
+    }
+
+    .hero-info-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .floating-card {
+      position: relative;
+      background: rgba(7, 17, 31, 0.84);
+      backdrop-filter: blur(14px);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+      min-height: 100%;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 6px;
+      line-height: 1.1;
+    }
+
+    .floating-card span {
+      color: var(--muted);
+      font-size: 0.96rem;
+      line-height: 1.6;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .stat {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      font-size: 1.14rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .icon {
+      width: 52px;
+      height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      background: rgba(47, 125, 246, 0.14);
+      border: 1px solid rgba(47, 125, 246, 0.24);
+      margin-bottom: 18px;
+      font-size: 1.4rem;
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .catalog-card {
+      overflow: hidden;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.04);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .catalog-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .catalog-image {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #091321;
+    }
+
+    .catalog-image img {
+      height: 100%;
+      transition: transform 0.35s ease;
+    }
+
+    .catalog-card:hover img {
+      transform: scale(1.04);
+    }
+
+    .catalog-tag {
+      position: absolute;
+      left: 16px;
+      top: 16px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(7, 17, 31, 0.82);
+      border: 1px solid rgba(255,255,255,0.12);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .catalog-body {
+      padding: 24px;
+    }
+
+    .catalog-body h3 {
+      font-size: 1.18rem;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    .catalog-body p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 0.98rem;
+    }
+
+    .catalog-link {
+      color: #93c5fd;
+      font-weight: 700;
+      font-size: 0.96rem;
+    }
+
+    .about-compact {
+      display: grid;
+      grid-template-columns: 1.04fr 0.96fr;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    .about-photo {
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      min-height: 100%;
+      background: #091321;
+    }
+
+    .about-photo img {
+      height: 100%;
+      min-height: 500px;
+      object-position: center bottom;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .step {
+      padding: 28px 24px;
+      border-radius: 24px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.07), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+
+    .step-number {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--blue), #5ea6ff);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 18px;
+      box-shadow: 0 12px 30px rgba(47, 125, 246, 0.3);
+    }
+
+    .step h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .step p {
+      color: var(--muted);
+    }
+
+    .cta-banner {
+      padding: 34px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at left top, rgba(47, 125, 246, 0.22), transparent 35%),
+        linear-gradient(135deg, rgba(255,255,255,0.09), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .cta-banner h3 {
+      font-size: clamp(1.7rem, 3vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 10px;
+    }
+
+    .cta-banner p {
+      color: var(--muted);
+      max-width: 670px;
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 0.92fr 1.08fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .contact-info {
+      display: grid;
+      gap: 18px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .info-item .icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      padding: 28px;
+      border-radius: 28px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.04));
+      box-shadow: var(--shadow);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      color: #e2e8f0;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      min-height: 56px;
+      padding: 0 16px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+      padding: 16px;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #94a3b8;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(96, 165, 250, 0.7);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.18);
+    }
+
+    .footer {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      background: rgba(4, 9, 17, 0.5);
+      padding: 34px 0;
+      margin-top: 26px;
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .footer p,
+    .footer a {
+      color: #cbd5e1;
+    }
+
+    .floating-whatsapp {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 1400;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 58px;
+      padding: 0 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--whatsapp), var(--whatsapp-strong));
+      color: #fff;
+      box-shadow: 0 16px 34px rgba(34, 197, 94, 0.30);
+      border: 1px solid rgba(255,255,255,0.18);
+      font-weight: 700;
+    }
+
+    .floating-whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
+    .floating-whatsapp .wa-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      flex-shrink: 0;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .about-compact,
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .stats,
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero-info-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-photo img {
+        min-height: 380px;
+      }
+    }
+
+    @media (max-width: 920px) {
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background: transparent;
+        box-shadow: none;
+        border-bottom: none;
+      }
+
+      .header.scrolled {
+        background: transparent;
+        box-shadow: none;
+        border-bottom: none;
+        backdrop-filter: none;
+      }
+
+      .menu,
+      .nav-actions .desktop-only {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 18px;
+        right: 0;
+      }
+
+      .nav {
+        min-height: auto;
+        justify-content: center;
+        position: relative;
+        padding-top: 18px;
+      }
+
+      .brand {
+        width: 100%;
+        justify-content: center;
+        max-width: none;
+      }
+
+      .brand-logo {
+        width: 88px;
+        height: 88px;
+        border-radius: 20px;
+      }
+
+      .brand-text {
+        display: none;
+      }
+
+      .mobile-panel {
+        padding-top: 18px;
+      }
+
+      .hero {
+        position: relative;
+        padding: 160px 0 64px;
+        background: url("images/cozinha.jpeg.jpeg") center center / cover no-repeat;
+      }
+
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          linear-gradient(180deg, rgba(4, 11, 21, 0.36) 0%, rgba(4, 11, 21, 0.70) 55%, rgba(7, 17, 31, 0.96) 100%);
+      }
+
+      .hero .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .hero-copy {
+        text-align: center;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(2.15rem, 11vw, 3.6rem);
+        line-height: 1.02;
+        margin-bottom: 14px;
+      }
+
+      .hero-copy p {
+        font-size: 0.98rem;
+        max-width: 100%;
+        margin-bottom: 22px;
+      }
+
+      .hero-actions,
+      .hero-badges {
+        display: grid;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .catalog-grid,
+      .process-grid,
+      .stats,
+      .form-grid,
+      .hero-info-row,
+      .grid-3,
+      .about-compact {
+        grid-template-columns: 1fr;
+      }
+
+      .about-photo {
+        order: 2;
+      }
+
+      .about-photo img {
+        min-height: auto;
+        height: auto;
+        object-position: center center;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: min(100% - 20px, var(--container));
+      }
+
+      .section {
+        padding: 68px 0;
+      }
+
+      .hero {
+        padding: 150px 0 58px;
+      }
+
+      .hero-copy h1 {
+        font-size: clamp(2rem, 12vw, 3rem);
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .card,
+      .catalog-body,
+      .step,
+      .stat,
+      .contact-form {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      .brand-logo {
+        width: 76px;
+        height: 76px;
+      }
+
+      .menu-toggle {
+        width: 50px;
+        height: 50px;
+        top: 14px;
+      }
+
+      .floating-whatsapp {
+        right: 12px;
+        left: 12px;
+        bottom: 12px;
+        justify-content: center;
+        min-height: 56px;
+      }
+
+      .floating-whatsapp span:last-child {
+        font-size: 0.96rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Elite Armários Planejados",
+    "image": "images/cozinha.jpeg.jpeg",
+    "url": "https://elitearmarios.com.br",
+    "telephone": "+55-62-98161-5395",
+    "email": "rsc.elitesalviano@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Goiânia",
+      "addressRegion": "GO",
+      "addressCountry": "BR"
+    },
+    "areaServed": "Goiânia e região",
+    "description": "Móveis planejados sob medida com acabamento premium, 19 anos de experiência e atendimento personalizado."
+  }
+  </script>
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="#inicio" class="brand" aria-label="Elite Armários Planejados">
+          <div class="brand-logo">
+            <img src="images/logo.jpeg.jpeg" alt="Logo Elite Armários Planejados" />
+          </div>
+          <div class="brand-text">
+            <strong>ELITE ARMÁRIOS</strong>
+            <span>Móveis planejados em Goiânia e região</span>
+          </div>
+        </a>
+
+        <div class="menu">
+          <a href="#inicio">Início</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#contato">Contato</a>
+        </div>
+
+        <div class="nav-actions">
+          <a
+            class="btn btn-primary desktop-only"
+            href="https://wa.me/5562981615395?text=Olá!%20Quero%20receber%20um%20orçamento%20para%20móveis%20planejados."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pedir orçamento agora
+          </a>
+
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+            ☰
+          </button>
+        </div>
+      </nav>
+
+      <div class="mobile-panel" id="mobilePanel">
+        <div class="mobile-links">
+          <a href="#inicio">Início</a>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#sobre">Sobre</a>
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#contato">Contato</a>
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5562981615395?text=Olá!%20Quero%20receber%20um%20orçamento%20para%20móveis%20planejados."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Pedir orçamento agora
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy reveal">
+            <div class="eyebrow">Atendimento em Goiânia e região</div>
+            <h1>Móveis planejados com aparência premium e projetos sob medida.</h1>
+            <p>
+              A Elite Armários Planejados desenvolve ambientes elegantes, funcionais e bem resolvidos
+              para quem busca sofisticação, organização e acabamento profissional em cada detalhe.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="https://wa.me/5562981615395?text=Olá!%20Quero%20receber%20um%20orçamento%20para%20móveis%20planejados."
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Solicitar orçamento pelo WhatsApp
+              </a>
+              <a class="btn btn-outline" href="#catalogo">Ver catálogo</a>
+            </div>
+
+            <div class="hero-badges">
+              <div class="hero-badge">19 anos de mercado</div>
+              <div class="hero-badge">MDF de alta qualidade</div>
+              <div class="hero-badge">Acabamento premium</div>
+              <div class="hero-badge">Atendimento personalizado</div>
+            </div>
+
+            <div class="stats">
+              <div class="stat">
+                <strong>19+</strong>
+                <span>Anos de experiência</span>
+              </div>
+              <div class="stat">
+                <strong>100%</strong>
+                <span>Projetos sob medida</span>
+              </div>
+              <div class="stat">
+                <strong>Premium</strong>
+                <span>Acabamento refinado</span>
+              </div>
+              <div class="stat">
+                <strong>GO</strong>
+                <span>Atendimento regional</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="hero-card">
+              <img src="images/cozinha.jpeg.jpeg" alt="Cozinha planejada premium da Elite Armários" />
+              <div class="hero-overlay"></div>
+            </div>
+
+            <div class="hero-info-row">
+              <div class="floating-card">
+                <strong>Atendimento rápido</strong>
+                <span>Fale no WhatsApp e receba orientação para começar seu orçamento.</span>
+              </div>
+
+              <div class="floating-card">
+                <strong>19 anos</strong>
+                <span>Experiência que transmite segurança em cada etapa do projeto.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Catálogo de ambientes</div>
+          <h2>Quatro referências para mostrar o padrão visual e a proposta da Elite.</h2>
+          <p>
+            Selecionamos alguns ambientes que representam bem o estilo da empresa: marcenaria funcional,
+            design limpo, materiais bem escolhidos e presença premium.
+          </p>
+        </div>
+
+        <div class="catalog-grid">
+          <article class="catalog-card reveal">
+            <div class="catalog-image">
+              <img src="images/cozinha.jpeg.jpeg" alt="Cozinha planejada moderna" />
+              <span class="catalog-tag">Cozinha planejada</span>
+            </div>
+            <div class="catalog-body">
+              <h3>Cozinhas com mais funcionalidade e presença visual</h3>
+              <p>
+                Projetos pensados para unir organização, praticidade e um acabamento que valoriza o ambiente.
+              </p>
+              <a class="catalog-link" href="#contato">Quero orçamento para cozinha</a>
+            </div>
+          </article>
+
+          <article class="catalog-card reveal">
+            <div class="catalog-image">
+              <img src="images/guardaroupa.jpeg.jpeg" alt="Guarda-roupa planejado com portas espelhadas" />
+              <span class="catalog-tag">Guarda-roupa planejado</span>
+            </div>
+            <div class="catalog-body">
+              <h3>Mais organização com marcenaria sob medida</h3>
+              <p>
+                Guarda-roupas pensados para otimizar espaço, melhorar o uso interno e deixar o ambiente mais elegante.
+              </p>
+              <a class="catalog-link" href="#contato">Quero orçamento para guarda-roupa</a>
+            </div>
+          </article>
+
+          <article class="catalog-card reveal">
+            <div class="catalog-image">
+              <img src="images/painel.jpeg.jpeg" alt="Painel planejado para sala" />
+              <span class="catalog-tag">Painel para sala</span>
+            </div>
+            <div class="catalog-body">
+              <h3>Salas com visual premium e composição mais sofisticada</h3>
+              <p>
+                Painéis que ajudam a valorizar a sala, organizar o ambiente e transmitir sensação de alto padrão.
+              </p>
+              <a class="catalog-link" href="#contato">Quero orçamento para painel</a>
+            </div>
+          </article>
+
+          <article class="catalog-card reveal">
+            <div class="catalog-image">
+              <img src="images/quarto.jpeg.jpeg" alt="Quarto planejado elegante" />
+              <span class="catalog-tag">Quarto planejado</span>
+            </div>
+            <div class="catalog-body">
+              <h3>Quartos planejados com conforto visual e funcionalidade</h3>
+              <p>
+                Soluções para trazer mais leveza, melhor aproveitamento do espaço e uma estética mais organizada.
+              </p>
+              <a class="catalog-link" href="#contato">Quero orçamento para quarto</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about-compact">
+          <div class="card reveal">
+            <div class="eyebrow">Sobre a empresa</div>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); line-height: 1.08; letter-spacing: -0.04em; margin-bottom: 14px;">
+              Marcenaria planejada para quem busca sofisticação, confiança e um resultado bem executado.
+            </h2>
+            <p style="color: var(--muted); margin-bottom: 18px;">
+              A Elite Armários Planejados atua em Goiânia e região desenvolvendo projetos sob medida
+              para diferentes ambientes. A proposta da empresa é unir beleza, organização, personalização
+              e excelente acabamento para entregar um resultado que realmente valoriza o imóvel.
+            </p>
+            <p style="color: var(--muted); margin-bottom: 22px;">
+              Mesmo em um catálogo mais enxuto, cada imagem apresentada aqui representa um padrão visual
+              limpo, elegante e comercial — ideal para clientes que querem investir com mais segurança.
+            </p>
+
+            <div class="grid-3">
+              <article class="card" style="padding: 20px;">
+                <h3>Projetos sob medida</h3>
+                <p>Planejamento conforme o seu espaço e sua necessidade.</p>
+              </article>
+
+              <article class="card" style="padding: 20px;">
+                <h3>Mais valorização</h3>
+                <p>Ambientes com visual mais sofisticado e bem resolvido.</p>
+              </article>
+
+              <article class="card" style="padding: 20px;">
+                <h3>Atendimento próximo</h3>
+                <p>Mais clareza e suporte desde o primeiro contato.</p>
+              </article>
+            </div>
+          </div>
+
+          <div class="about-photo reveal">
+            <img src="images/quarto.jpeg.jpeg" alt="Quarto planejado da Elite Armários" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="como-funciona">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Como funciona</div>
+          <h2>Um atendimento direto, profissional e pensado para agilizar seu orçamento.</h2>
+          <p>
+            O processo é simples: você chama no WhatsApp, apresenta sua ideia e a equipe conduz
+            o atendimento para transformar a necessidade em um projeto sob medida.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <article class="step reveal">
+            <div class="step-number">1</div>
+            <h3>Envie sua ideia</h3>
+            <p>
+              Fale com a equipe no WhatsApp e envie seu ambiente, referências e medidas aproximadas.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">2</div>
+            <h3>Alinhamento do projeto</h3>
+            <p>
+              A necessidade do cliente é analisada para chegar a uma solução bonita, funcional e personalizada.
+            </p>
+          </article>
+
+          <article class="step reveal">
+            <div class="step-number">3</div>
+            <h3>Orçamento e andamento</h3>
+            <p>
+              Depois do alinhamento, você recebe orientação para dar andamento ao projeto com mais segurança.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div>
+            <h3>Solicite seu orçamento e veja como seu ambiente pode ganhar mais sofisticação.</h3>
+            <p>
+              Fale com a Elite Armários Planejados para receber atendimento no WhatsApp e começar
+              seu projeto com uma empresa que transmite confiança, organização e padrão premium.
+            </p>
+          </div>
+
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5562981615395?text=Olá!%20Quero%20solicitar%20um%20orçamento%20para%20meu%20projeto%20de%20móveis%20planejados."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Solicitar orçamento agora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contato">
+      <div class="container">
+        <div class="section-head reveal">
+          <div class="eyebrow">Contato</div>
+          <h2>Fale com a Elite Armários Planejados e receba atendimento pelo WhatsApp.</h2>
+          <p>
+            Preencha as informações abaixo para montar uma mensagem automática e agilizar seu orçamento.
+          </p>
+        </div>
+
+        <div class="contact-wrap">
+          <div class="contact-info">
+            <div class="info-item reveal">
+              <div class="icon">☎</div>
+              <div>
+                <h3>WhatsApp</h3>
+                <p><a href="https://wa.me/5562981615395" target="_blank" rel="noopener noreferrer">(62) 98161-5395</a></p>
+              </div>
+            </div>
+
+            <div class="info-item reveal">
+              <div class="icon">◎</div>
+              <div>
+                <h3>Instagram</h3>
+                <p>
+                  <a href="https://www.instagram.com/elitearmariosplanejados/" target="_blank" rel="noopener noreferrer">
+                    @elitearmariosplanejados
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item reveal">
+              <div class="icon">⌂</div>
+              <div>
+                <h3>Atendimento</h3>
+                <p>Goiânia e região</p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="whatsappForm">
+            <div class="form-grid">
+              <div class="field">
+                <label for="nome">Seu nome</label>
+                <input type="text" id="nome" placeholder="Digite seu nome" required />
+              </div>
+
+              <div class="field">
+                <label for="telefone">Seu telefone</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000" required />
+              </div>
+
+              <div class="field full">
+                <label for="ambiente">Qual ambiente você quer planejar?</label>
+                <input type="text" id="ambiente" placeholder="Ex.: cozinha, quarto, painel, guarda-roupa" required />
+              </div>
+
+              <div class="field full">
+                <label for="mensagem">Detalhes do projeto</label>
+                <textarea
+                  id="mensagem"
+                  placeholder="Descreva seu projeto, medidas aproximadas, referências ou prazo desejado."
+                ></textarea>
+              </div>
+
+              <div class="field full">
+                <button type="submit" class="btn btn-primary">
+                  Enviar meu orçamento pelo WhatsApp
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-wrap">
+      <p>© 2026 Elite Armários Planejados. Todos os direitos reservados.</p>
+      <p><a href="#inicio">Voltar ao topo</a></p>
+    </div>
+  </footer>
+
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/5562981615395?text=Olá!%20Quero%20receber%20um%20orçamento%20para%20móveis%20planejados."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Falar no WhatsApp"
+  >
+    <span class="wa-icon">✆</span>
+    <span>WhatsApp</span>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const mobilePanel = document.getElementById("mobilePanel");
+    const header = document.getElementById("header");
+    const mobileLinks = document.querySelectorAll(".mobile-links a");
+    const revealItems = document.querySelectorAll(".reveal");
+    const whatsappForm = document.getElementById("whatsappForm");
+
+    menuToggle.addEventListener("click", () => {
+      mobilePanel.classList.toggle("open");
+      menuToggle.textContent = mobilePanel.classList.contains("open") ? "✕" : "☰";
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener("click", () => {
+        mobilePanel.classList.remove("open");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    window.addEventListener("scroll", () => {
+      if (window.innerWidth > 920 && window.pageYOffset > 20) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        }
+      });
+    }, { threshold: 0.12 });
+
+    revealItems.forEach(item => observer.observe(item));
+
+    whatsappForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const nome = document.getElementById("nome").value.trim();
+      const telefone = document.getElementById("telefone").value.trim();
+      const ambiente = document.getElementById("ambiente").value.trim();
+      const mensagem = document.getElementById("mensagem").value.trim();
+
+      const texto =
+`Olá! Quero receber um orçamento para móveis planejados.
+
+*Nome:* ${nome}
+*Telefone:* ${telefone}
+*Ambiente:* ${ambiente}
+
+*Detalhes do projeto:*
+${mensagem || "Ainda vou enviar mais detalhes."}`;
+
+      const url = `https://wa.me/5562981615395?text=${encodeURIComponent(texto)}`;
+      window.open(url, "_blank");
+    });
+  </script>
+</body>
+</html>
